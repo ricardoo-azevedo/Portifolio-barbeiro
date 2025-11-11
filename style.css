@@ -1,3 +1,4 @@
+/* Seção Hero */
 .hero {
   min-height: 90vh;
   display: flex;
@@ -13,42 +14,9 @@
   object-fit: contain;
 }
 
+/* Navbar */
 .navbar-brand {
   letter-spacing: 2px;
-}
-
-.card {
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-a.btn {
-  transition: 0.3s;
-}
-
-a.btn:hover {
-  opacity: 0.85;
-}
-
-.card-body {
-  color: #f8f9fa;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    text-align: center;
-  }
-
-  .hero-logo {
-    width: 220px;
-    margin-bottom: 1.5rem;
-  }
 }
 
 .logo-navbar {
@@ -58,9 +26,94 @@ a.btn:hover {
   object-fit: cover;
 }
 
+/* Cartões */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.card-body {
+  color: #f8f9fa;
+}
+
+/* Galeria */
 #galeria img {
   width: 100%;
   height: 400px;
   object-fit: cover;
   border-radius: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+#galeria img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .hero {
+    text-align: center;
+    padding-top: 6rem;
+  }
+
+  .hero-logo {
+    width: 260px;
+    margin-bottom: 1.5rem;
+  }
+
+  #galeria img {
+    height: 300px;
+  }
+
+  .card .card-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 7rem;
+  }
+
+  .hero-logo {
+    width: 200px;
+  }
+
+  h1, h2 {
+    font-size: 1.6rem;
+  }
+
+  p, .card-text, .small {
+    font-size: 0.95rem;
+  }
+
+  #galeria img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding-top: 5rem;
+  }
+
+  .hero-logo {
+    width: 160px;
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  #galeria img {
+    height: 220px;
+  }
 }
